@@ -12,7 +12,16 @@ export interface Fonts {
   };
 }
 
+export interface Borders {
+  borderRadius: {
+    sm: '8px';
+    md: '20px';
+    big: '40px';
+  };
+}
+
 export interface ThemeBody {
   colors: Colors;
   fonts: Fonts;
+  borders: Borders;
 }

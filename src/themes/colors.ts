@@ -13,6 +13,10 @@ const colors: Colors = {
   warning: '#FFAD1F',
   attention: '#F45D22',
   danger: '#E0245E',
+  //
+  // BACKGROUND COLOR
+  //
+  backgroundColor: '#fffffc',
 };
 
 export default colors;
