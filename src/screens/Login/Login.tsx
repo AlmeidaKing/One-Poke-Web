@@ -1,6 +1,6 @@
 import React from 'react';
 
-// styled
+// styles:
 import Wrapper from './Login.styles';
 
 const Login: React.FC = () => {

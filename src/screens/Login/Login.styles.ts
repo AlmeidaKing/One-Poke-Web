@@ -6,6 +6,8 @@ interface Props {
 }
 
 const Wrapper = styled.div<Props>`
+  width: 100vw;
+  height: 100vh;
   font-family: ${({ theme }) => theme.fonts.fontFamily};
   font-weight: ${({ theme }) => theme.fonts.fontWeight.light};
 `;
