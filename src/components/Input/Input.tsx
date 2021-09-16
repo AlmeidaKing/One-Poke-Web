@@ -6,7 +6,7 @@ import { Wrapper, InputStyles } from './Input.styles';
 interface Props {
   value: string | number;
   name: string;
-  callBackFunc: (field: string, value: string) => void;
+  callBackFunc?: (field: string, value: string) => void;
   placeholder?: string;
   autoComplete?: string;
   label?: string;
@@ -15,7 +15,7 @@ interface Props {
 const Input: React.FC<Props> = ({
   value,
   placeholder,
-  callBackFunc,
+  callBackFunc = () => '',
   name,
   autoComplete = 'off',
   label,
