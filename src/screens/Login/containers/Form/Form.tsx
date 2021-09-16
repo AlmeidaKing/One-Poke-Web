@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 
 // styles
 import Wrapper from './Form.styles';
@@ -21,9 +21,13 @@ const Form: React.FC = () => {
     setFormData({ ...formData, [field]: value });
   };
 
-  console.log(formData);
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    console.log('submitted');
+  };
+
   return (
-    <Wrapper>
+    <Wrapper method="POST" onSubmit={handleSubmit}>
       <div className="inputs-container">
         <Input
           name="email"
