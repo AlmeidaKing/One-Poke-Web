@@ -9,7 +9,7 @@ const Wrapper = styled.main`
   flex-direction: column;
   align-items: center;
 
-  background-color: ${colors.white};
+  background-color: ${colors.backgroundColor};
 `;
 
 export default Wrapper;

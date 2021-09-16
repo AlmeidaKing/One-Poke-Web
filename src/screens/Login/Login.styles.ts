@@ -16,15 +16,21 @@ const Wrapper = styled.div<Props>`
   justify-content: center;
 
   .container {
-    background-color: ${({ theme }) => theme.colors.backgroundColor};
-    padding: 16px 80px;
+    width: 400px;
+    background-color: ${({ theme }) => theme.colors.white};
+    padding: 40px;
     border-radius: ${({ theme }) => theme.borders.borderRadius.md};
 
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .pokemon-image {
-    width: 200px;
+    width: 130px;
   }
 `;
 

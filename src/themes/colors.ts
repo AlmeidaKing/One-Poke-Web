@@ -6,6 +6,10 @@ const colors: Colors = {
   black: '#04151F',
   white: '#FFF',
   //
+  // TEXT COLOR
+  //
+  textColor: '#383838',
+  //
   // ALERT COLORS
   //
   success: '#17BF63',
@@ -17,6 +21,14 @@ const colors: Colors = {
   // BACKGROUND COLOR
   //
   backgroundColor: '#fffffc',
+  //
+  // PRIMARY COLORS
+  //
+  primaryLight: '#81d35c',
+  //
+  // HIGHLIGHT COLORS
+  //
+  highlightMedium: '#41d31f',
 };
 
 export default colors;

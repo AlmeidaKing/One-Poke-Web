@@ -11,6 +11,9 @@ import * as POKEMON_DETAILS_ACTIONS from 'store/ducks/pokemonDetails/actions';
 // styles:
 import Wrapper from './Login.styles';
 
+// containers
+import { Form } from './containers/Form';
+
 const Login: React.FC = () => {
   const {
     pokemonsListData,
@@ -19,12 +22,12 @@ const Login: React.FC = () => {
 
   const dispatch = useDispatch();
 
-  // fetch pokemons list
+  // Fetch pokemons list
   useEffect(() => {
     dispatch(POKEMONS_LIST_ACTIONS.getPokemonsListRequest());
   }, []);
 
-  // wait fetch pokemons list, so fetch pokemon details
+  // Wait fetch pokemons list, so fetch pokemon details
   useEffect(() => {
     if (pokemonsListData?.data)
       dispatch(
@@ -48,6 +51,7 @@ const Login: React.FC = () => {
             }
           />
         )}
+        <Form />
       </div>
     </Wrapper>
   );
