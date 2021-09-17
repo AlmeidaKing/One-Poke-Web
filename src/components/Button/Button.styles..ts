@@ -7,6 +7,7 @@ const ButtonStyles = styled.button`
   width: 100%;
   height: 40px;
   cursor: pointer;
+  outline: none;
 
   transition: all 300ms ease;
 

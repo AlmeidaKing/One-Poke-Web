@@ -10,6 +10,7 @@ interface Props {
   placeholder?: string;
   autoComplete?: string;
   label?: string;
+  type?: string;
 }
 
 const Input: React.FC<Props> = ({
@@ -19,6 +20,7 @@ const Input: React.FC<Props> = ({
   name,
   autoComplete = 'off',
   label,
+  type = 'text',
 }: Props) => {
   const [inputValue, setInputValue] = useState(value);
 
@@ -36,6 +38,7 @@ const Input: React.FC<Props> = ({
         placeholder={placeholder}
         onChange={(e) => handleChange(e.target.value)}
         autoComplete={autoComplete}
+        type={type}
       />
     </Wrapper>
   );

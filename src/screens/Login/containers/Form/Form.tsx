@@ -1,4 +1,8 @@
 import React, { FormEvent, useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
+// utils:
+import { setCookie } from 'utils';
 
 // styles
 import Wrapper from './Form.styles';
@@ -17,6 +21,8 @@ const Form: React.FC = () => {
     password: '',
   });
 
+  const { push } = useHistory();
+
   const handleChangeInputText = (field: string, value: string) => {
     setFormData({ ...formData, [field]: value });
   };
@@ -24,6 +30,10 @@ const Form: React.FC = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     console.log('submitted');
+    setCookie('logged', 'true');
+    setTimeout(() => {
+      push('/dashboard');
+    }, 500);
   };
 
   return (
@@ -39,6 +49,7 @@ const Form: React.FC = () => {
 
         <Input
           name="password"
+          type="password"
           value={formData.password}
           placeholder="******"
           callBackFunc={handleChangeInputText}

@@ -21,8 +21,18 @@ export interface Borders {
   };
 }
 
+export interface Breakpoints {
+  smaller: string;
+  small: string;
+  medium: string;
+  big: string;
+  bigger: string;
+  maxSize: string;
+}
+
 export interface ThemeBody {
   colors: Colors;
   fonts: Fonts;
   borders: Borders;
+  breakpoints: Breakpoints;
 }

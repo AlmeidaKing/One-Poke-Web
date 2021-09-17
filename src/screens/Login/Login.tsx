@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 // types:
 import { ApplicationState } from 'store';
@@ -7,6 +8,9 @@ import { ApplicationState } from 'store';
 // actions:
 import * as POKEMONS_LIST_ACTIONS from 'store/ducks/pokemonsList/actions';
 import * as POKEMON_DETAILS_ACTIONS from 'store/ducks/pokemonDetails/actions';
+
+// utils:
+import { getCookie } from 'utils';
 
 // styles:
 import Wrapper from './Login.styles';
@@ -21,6 +25,11 @@ const Login: React.FC = () => {
   } = useSelector((state: ApplicationState) => state);
 
   const dispatch = useDispatch();
+  const { push } = useHistory();
+
+  // useEffect(() => {
+  //   if (getCookie('logged')) push('/dashboard');
+  // }, [getCookie('logged')]);
 
   // Fetch pokemons list
   useEffect(() => {
@@ -36,8 +45,6 @@ const Login: React.FC = () => {
         ),
       );
   }, [pokemonsListData]);
-
-  console.log(pokemonDetails);
 
   return (
     <Wrapper>
