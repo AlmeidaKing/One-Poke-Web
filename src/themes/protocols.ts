@@ -12,7 +12,17 @@ export interface Fonts {
   };
 }
 
+export interface Borders {
+  borderRadius: {
+    xs: string;
+    sm: string;
+    md: string;
+    big: string;
+  };
+}
+
 export interface ThemeBody {
   colors: Colors;
   fonts: Fonts;
+  borders: Borders;
 }
