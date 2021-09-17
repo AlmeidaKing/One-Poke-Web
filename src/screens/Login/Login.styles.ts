@@ -27,6 +27,11 @@ const Wrapper = styled.div<Props>`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: ${({ theme }) => theme.breakpoints.small}) {
+      box-shadow: none;
+      margin: 16px;
+    }
   }
 
   .pokemon-image {
