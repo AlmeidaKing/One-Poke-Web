@@ -30,9 +30,13 @@ export interface Breakpoints {
   maxSize: string;
 }
 
+export interface Box {
+  boxShadow: string;
+}
 export interface ThemeBody {
   colors: Colors;
   fonts: Fonts;
   borders: Borders;
   breakpoints: Breakpoints;
+  box: Box;
 }

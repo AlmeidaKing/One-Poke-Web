@@ -20,7 +20,7 @@ const colors: Colors = {
   //
   // BACKGROUND COLOR
   //
-  backgroundColor: '#fffffc',
+  backgroundColor: '#fefef7',
   //
   // PRIMARY COLORS
   //

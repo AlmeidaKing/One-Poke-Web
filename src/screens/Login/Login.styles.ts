@@ -5,7 +5,7 @@ interface Props {
   theme: ThemeBody;
 }
 
-const Wrapper = styled.div<Props>`
+const Wrapper = styled.main<Props>`
   width: 100vw;
   height: 100vh;
   font-family: ${({ theme }) => theme.fonts.fontFamily};
@@ -21,7 +21,7 @@ const Wrapper = styled.div<Props>`
     padding: 40px;
     border-radius: ${({ theme }) => theme.borders.borderRadius.md};
 
-    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: ${({ theme }) => theme.box.boxShadow};
 
     display: flex;
     flex-direction: column;

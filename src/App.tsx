@@ -15,7 +15,7 @@ import { ThemeProvider } from 'styled-components';
 import main from 'themes/main';
 
 // screens:
-import { Login } from 'screens';
+import { Login, Dashboard } from 'screens';
 
 // styles:
 import 'assets/css/reset.css';
@@ -31,6 +31,11 @@ const App: React.FC = () => {
             <Route path="/login">
               <AppContainer>
                 <Login />
+              </AppContainer>
+            </Route>
+            <Route path="/dashboard">
+              <AppContainer>
+                <Dashboard />
               </AppContainer>
             </Route>
           </Switch>
