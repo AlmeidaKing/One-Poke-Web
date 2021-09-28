@@ -18,10 +18,6 @@ Aplicação React JS e Typescript com testes automatizados. Consumindo dados via
   yarn install
   ```
 
-  ```
-  yarn install
-  ```
-
   Rodar o projeto utlizando: 
   
   ```
